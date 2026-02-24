@@ -1,0 +1,17 @@
+[general]
+ignore=body-is-missing
+
+[title-match-regex]
+regex=^(FEAT|REF|FIX|TEST|CHORE|DOCS|CI|BUILD)(\(.+\))?!?:.+$
+
+[title-max-length]
+line-length=70
+
+[title-min-length]
+min-length=10
+
+[body-max-line-length]
+line-length=72
+
+[body-min-length]
+min-length=0

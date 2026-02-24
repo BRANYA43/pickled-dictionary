@@ -1,0 +1,33 @@
+line-length = 100
+target-version = "py313"
+
+[lint]
+# Start with the default rule set (E, F, I), and extend with common useful ones.
+select = [
+    "E",    # pycodestyle
+    "W",    # errors and warnings
+    "F",    # Pyflakes
+    "I",    # isort (import sorting)
+    "B",    # flake8-bugbear
+    "C4",   # flake8-comprehensions
+    "DJ",   # flake8-django rules (Essential for Django projects)
+    "UP",   # pyupgrade
+    "SIM",  # flake8-simplify
+    "A",    # flake8-builtins
+    "ERA",  # eradicate (commented out code)
+    "T20",  # flake8-print (disallow print statements)
+]
+
+# Ignore specific rules that conflict with Django conventions or are overly pedantic
+ignore = [
+    # F401: Unused imports (necessary for Django signal imports in apps.py ready() method)
+    "F401",
+    # E501: Line too long (handled by the formatter, if enabled)
+    "E501",
+    # D100, D101, etc.: Ignore missing docstring rules globally if you don't require them everywhere
+    # "D100", "D101", "D102", "D103", "D104",
+]
+
+[format]
+quote-style = "single"
+skip-magic-trailing-comma = false
