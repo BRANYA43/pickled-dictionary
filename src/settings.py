@@ -6,4 +6,4 @@ DATABASE_FILE: Path = BASE_DIR / 'database/db.sqlite3'
 
 MIGRATION_DIR: Path = BASE_DIR / 'database/migrations/'
 
-MODEL_DIR: Path = BASE_DIR / 'database/models/'
+MODEL_MODULE: str = 'database.models'
